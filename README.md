@@ -1,0 +1,1 @@
+# opensuse-linux-after-install
