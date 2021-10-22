@@ -1,5 +1,5 @@
 ## openSUSE after install
-My setup after install openSUSE
+My setup after install openSUSE Leap 15.3
 
 
 - [IDE's](#ides)
@@ -40,6 +40,34 @@ sudo zypper -n install dstat
 sudo zypper -n install albert
 ```
 
+**Login**
+
+Hide user from login list using Gnome. 
+
+Create the file /etc/dconf/profile/gdm
+```
+user-db:user
+system-db:gdm
+file-db:/usr/share/gdm/greeter.dconf-defaults
+```
+
+Create the directory:
+```
+sudo mkdir /etc/dconf/db/gdm.d
+```
+
+Create the file `/etc/dconf/db/gdm.d/00-login-screen`:
+```
+[org/gnome/login-screen]
+# Do not show the user list
+disable-user-list=true
+```
+
+Execute
+```
+$ sudo dconf update
+```
+
 **External Repositories**
 ```
 sudo zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
@@ -75,6 +103,18 @@ sudo zypper -n install postgresql12-devel
 ```
 sudo zypper -n install tmux
 ```
+
+<a id="ides"></a>
+**Eclipse**
+Dowload the package on https://www.eclipse.org/.
+Extract the package and start the installer.
+```
+tar -xf eclipse-inst-jre-linux64.tar.gz
+cd eclipse-installer
+./eclipse-inst
+```
+
+And follow the instructions.
 
 <a id="browser"></a>
 **Browsers**
