@@ -68,6 +68,13 @@ Execute
 $ sudo dconf update
 ```
 
+**Turn off screen rotation**
+```
+sudo systemctl stop iio-sensor-proxy.service
+sudo systemctl disable iio-sensor-proxy.service
+sudo zypper remove iio-sensor-proxy
+```
+
 **External Repositories**
 ```
 sudo zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
