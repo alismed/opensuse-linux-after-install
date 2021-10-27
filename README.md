@@ -147,6 +147,11 @@ wget https://github.com/stella-emu/stella/releases/download/6.5.3/stella-6.5.3-2
 sudo rpm -i stella.rpm
 ```
 
+**Genesis**
+```
+sudo zypper in mednafen
+```
+
 **Node**
 Using _Node Version Manager_
 ```shell
