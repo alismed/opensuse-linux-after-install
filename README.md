@@ -152,6 +152,18 @@ sudo rpm -i stella.rpm
 sudo zypper in mednafen
 ```
 
+<a id="docker"></a>
+**Docker**
+```shell
+sudo zypper addrepo https://download.docker.com/linux/sles/docker-ce.repo
+sudo zypper -n in docker
+sudo zypper -n in docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo gpasswd -a "${USER}" docker
+reboot
+```
+
 **Node**
 Using _Node Version Manager_
 ```shell
