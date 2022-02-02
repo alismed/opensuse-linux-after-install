@@ -20,13 +20,23 @@ My setup after install openSUSE Leap 15.3
 
 
 <a id="system"></a>
+**System**
+
+Add repositories
+```shell
+sudo zypper addrepo -f http://download.opensuse.org/distribution/leap/42.2/repo/oss/ OSS2
+sudo zypper addrepo -f http://download.opensuse.org/distribution/leap/42.3/repo/oss/ OSS3
+sudo zypper refresh
+```
+
 Update the system
 ```shell
 sudo zypper ref && sudo zypper up
+
+sudo zypper in -y autoconf automake bison flex fontconfig-devel freetype-devel gcc gcc-c++ ghostscript-fonts gperf libicu-devel libjpeg8-devel libmcrypt-devel libpng12-devel libtool libxml2-devel make net-tools libopenssl-devel pcre-devel postgresql-devel psmisc re2c readline-devel ruby unixODBC-devel wget libaio1
 ```
 
-<a id="system"></a>
-**System**
+More packages
 ```shell
 sudo zypper -n install cowsay fortune
 sudo zypper -n install htop
@@ -103,6 +113,7 @@ sudo zypper addrepo https://download.opensuse.org/repositories/server:/database/
 sudo zypper refresh
 sudo zypper -n install mysql-utilities
 sudo zypper -n install postgresql12-devel
+sudo zypper in sqlite3 libsqlite3-dev
 ```
 
 <a id="heroku"></a>
