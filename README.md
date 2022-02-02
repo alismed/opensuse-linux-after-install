@@ -105,11 +105,36 @@ sudo zypper -n install mysql-utilities
 sudo zypper -n install postgresql12-devel
 ```
 
+<a id="heroku"></a>
+**Heroku**
+```shell
+sudo curl https://cli-assets.heroku.com/install.sh | sh
+```
+
+<a id="languages"></a>
+**asdf**
+Clone the repository
+```
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
+```
+
+Add the following to `~/.bashrc`
+```
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+```
+
+Update your current shell environment
+```
+source ~/.bashrc
+```
+
 <a id="terminal"></a>
 **Terminal**
 ```
 sudo zypper -n install tmux
 ```
+
 
 <a id="ides"></a>
 **Eclipse**
