@@ -33,7 +33,7 @@ Update the system
 ```shell
 sudo zypper ref && sudo zypper up
 
-sudo zypper in -y autoconf automake bison flex fontconfig-devel freetype-devel gcc gcc-c++ ghostscript-fonts gperf libicu-devel libjpeg8-devel libmcrypt-devel libpng12-devel libtool libxml2-devel make net-tools libopenssl-devel pcre-devel postgresql-devel psmisc re2c readline-devel ruby unixODBC-devel wget libaio1
+sudo zypper in -y autoconf automake bison flex fontconfig-devel freetype-devel gcc gcc-c++ ghostscript-fonts gperf libicu-devel libjpeg8-devel libmcrypt-devel libpng12-devel libtool libxml2-devel make net-tools libopenssl-devel pcre-devel devel psmisc re2c readline-devel ruby unixODBC-devel wget libaio1
 ```
 
 More packages
@@ -112,7 +112,10 @@ sudo zypper -n install code
 sudo zypper addrepo https://download.opensuse.org/repositories/server:/database/openSUSE_Leap_15.3/server:database.repo
 sudo zypper refresh
 sudo zypper -n install mysql-utilities
+sudo zypper in postgresql12-contrib 
 sudo zypper -n install postgresql12-devel
+sudo zypper in postgresql12-server-devel
+sudo zypper in postgresql12
 sudo zypper in sqlite3 libsqlite3-dev
 ```
 
@@ -139,6 +142,28 @@ Update your current shell environment
 ```
 source ~/.bashrc
 ```
+
+**Install Ruby**
+```
+asdf plugin-add ruby
+```
+
+List of available versions
+```
+asdf list all ruby
+```
+
+Example installing version 3.1.0
+```
+asdf install ruby 3.1.0
+```
+
+Set the version current
+```
+asdf global ruby 3.1.0
+```
+
+
 
 <a id="terminal"></a>
 **Terminal**
