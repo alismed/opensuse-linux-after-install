@@ -4,6 +4,7 @@ My setup after install openSUSE Leap 15.3
 
 - [IDE's](#ides)
 - [System](#system)
+- [Snappy](#snappy)
 - [Security](#security)
 - [Git](#git)
 - [Games](#games)
@@ -48,6 +49,20 @@ sudo zypper -n install lsof
 sudo zypper -n install net-tools
 sudo zypper -n install dstat
 sudo zypper -n install albert
+sudo zypper in openssh
+sudo zypper in git
+```
+
+
+<a id="snappy"></a>
+**Snappy**
+```
+sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_15.2 snappy
+sudo zypper --gpg-auto-import-keys refresh
+sudo zypper dup --from snappy
+sudo zypper in snapd
+sudo systemctl enable snapd
+sudo systemctl start snapd
 ```
 
 **Login**
@@ -91,20 +106,6 @@ sudo zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE
 sudo zypper dup --from packman --allow-vendor-change
 ```
 
-<a id="system"></a>
-**Git**
-```
-sudo zypper in openssh
-sudo zypper in git
-```
-
-```
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
-sudo zypper refresh
-sudo zypper -n install code
-```
-
 
 <a id="databases"></a>
 **Databases Clients**
@@ -116,7 +117,7 @@ sudo zypper in postgresql12-contrib
 sudo zypper -n install postgresql12-devel
 sudo zypper in postgresql12-server-devel
 sudo zypper in postgresql12
-sudo zypper in sqlite3 libsqlite3-dev
+sudo zypper in sqlite3 sqlite3-devel libsqlite3-dev
 ```
 
 <a id="heroku"></a>
@@ -164,7 +165,6 @@ asdf global ruby 3.1.0
 ```
 
 
-
 <a id="terminal"></a>
 **Terminal**
 ```
@@ -183,6 +183,16 @@ cd eclipse-installer
 ```
 
 And follow the instructions.
+
+
+**Visual Studio Code**
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
+sudo zypper refresh
+sudo zypper -n install code
+```
+
 
 <a id="browser"></a>
 **Browsers**
