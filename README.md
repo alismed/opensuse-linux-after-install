@@ -235,6 +235,13 @@ sudo gpasswd -a "${USER}" docker
 reboot
 ```
 
+**Docker Compose**
+```shell
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+
 **Node**
 Using _Node Version Manager_
 ```shell
