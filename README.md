@@ -193,6 +193,11 @@ sudo zypper refresh
 sudo zypper -n install code
 ```
 
+**Neovim**
+```
+sudo zypper in neovim
+```
+
 
 <a id="browser"></a>
 **Browsers**
