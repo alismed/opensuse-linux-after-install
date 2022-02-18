@@ -65,6 +65,11 @@ sudo systemctl enable snapd
 sudo systemctl start snapd
 ```
 
+**Flathub**
+```
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
 **Login**
 
 Hide user from login list using Gnome. 
@@ -169,6 +174,11 @@ asdf global ruby 3.1.0
 **Terminal**
 ```
 sudo zypper -n install tmux
+```
+
+**Amazon Workspaces Client**
+```
+flatpak install flathub com.amazon.Workspaces
 ```
 
 
